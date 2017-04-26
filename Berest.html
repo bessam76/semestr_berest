@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs">
+  <head>
+    <meta content="text/html; charset=UTF-8" />
+    <title>Dokumentace Semestralniho projektu</title>
+  </head>
+  <body>
+    <header>
+      <h1>Fotoalbum</h1>
+      <a href="">Nahrany projekt na GitHub</a>
+      <nav>
+        <ul>
+          <li> <a href="#uvod">Úvod</a></li>
+          <li> <a href="#metodika">Metodika</a> </li>
+          <li> <a href="#popis">Popis elementů a atributů</a></li>
+          <li> <a href="#transformace">Transformace</a></li>
+          <li> <a href="#zaver">Závěr</a></li>
+            <li> <a href="#autor">Autor</a></li>
+          </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <article id="uvod">
+            <h2>Úvod</h2>
+            <p>Ve svém projektu "Fotoalbum" jsem popsal hlavní principy funkcionality aplikace na základě výbraných stránek.</p>  
+</article>
+        <article id="metodika">
+          <h2>Metodika</h2>
+          <p>Aplikace se pustí hned na <b>úvodní strance</b>.
+              <br />Na úvodní strance je blok:<ul>
+            <li>Fotky.</li>
+            <li>Kamera</li>
+           </ul>
+            <br />Kliknutím na "moje stranka" se zobrazí profil uživatele, kde je možné měnit nastávení a zadávat parametry:<ul><li>Heslo</li><li> Privatnost</li><li>Blokace</li> </ul><br />
+Pro práci jsem využil "XML copy editor" a "Brackets".</p>
+        </article>
+        <article id="popis">
+          <h2 >Popis elementů a atributů</h2>
+          <table border="1.2" style="font:18px verdana">
+            <tr bgcolor="yellow"></tr>
+            <tr>
+              <th>Element</th>
+              <th>Popis</th>
+            </tr>
+            <tr>
+              <td>Fotoalbum</td>
+              <td>název aplikace</td>
+            </tr>
+            <tr>
+              <td>uvodni_stranka</td>
+              <td>Potomek elementu Fotoalbum.Domovska stranka aplikace s prislusnymi prvky</td>
+            </tr>
+            <tr>
+              <td>fotka</td>
+              <td>Potomek elementu uvodni_stranka.Feed stranka s fotkami pratel</td>
+            </tr>
+            <tr>
+              <td>rozmisteni</td>
+              <td>Potomek elementu fotka.Rozmisteni feedu</td>
+            </tr>
+            <tr>
+              <td>autor</td>
+              <td>Potomek elementu fotka.Kdo je autor foto</td>
+            </tr>
+            <tr>
+              <td>datum</td>
+              <td>Potomek elementu fotka. Datum publikace</td>
+            </tr>
+            <tr>
+              <td>komentare</td>
+              <td>Potomek elementu fotka.Blok komentaru pro uzivatele</td>
+            </tr>
+            <tr>
+              <td>tagy</td>
+              <td>Potomek elementu komentare.Tagy slouzi lepsi navigaci.</td>
+            </tr>
+            <tr>
+              <td>smiles</td>
+              <td>Potomek elementu komentare.Emodzi smajliky</td>
+            </tr>
+            <tr>
+              <td>barva_textu</td>
+              <td>Potomek elementu komentare.Barva textu komentare.</td>
+            </tr>
+            <tr>
+              <td>velikost_pisma</td>
+              <td>Potomek elementu komentare.Velikost pisma komentare.</td>
+            </tr>
+            <tr>
+              <tr>
+                <td>like</td>
+                <td>Potomek elementu fotka.Ukaze komu se libila fotka.</td>
+              </tr>
+              <tr>
+                <td>rozmisteni</td>
+                <td>Potomek elementu like.Rozmisteni like ikony</td>
+              </tr>
+              <tr>
+                <td>barva</td>
+                <td>Potomek elementu like.Zadava barvu ikone like</td>
+              </tr>
+              <tr>
+                <td>obrazek</td>
+                <td>Potomek elementu like.Ikona elementa like.</td>
+              </tr>
+              <tr>
+                <td>adresa</td>
+                <td>Potomek elementu "ulozeno".Název domácí adresy.</td>
+              </tr>
+              <tr>
+                <td>stav</td>
+                <td>Potomek elementu like.Jestli stav kladny,ikona se obarvi</td>
+              </tr>
+              <tr>
+                <td>sdileni</td>
+                <td>Potomek elementu fotka.Moznost posilat foto pratelum</td>
+              </tr>
+              <tr>
+                <td>rozmisteni</td>
+                <td>Potomek elementu sdileni.Rozmisteni ikony</td>
+              </tr>
+              <tr>
+                <td>obrazek</td>
+                <td>Potomek elementu sdileni.Ikona sdileni</td>
+              </tr>
+              <tr>
+                <td>barva</td>
+                <td>Potomek elementu sdileni.Barva ikony</td>
+              </tr>
+              <tr>
+                <td>kamera</td>
+                <td>Potomek elementu uvodni_stranka.Rychle vyfotit</td>
+              </tr>
+              <tr>
+                <td>rozmisteni</td>
+                <td>Potomek elementu kamera.Rozmisteni ikony</td>
+              </tr>
+              <tr>
+                <td>obrazek</td>
+                <td>Potomek elementu kamera.Ikona sdileni</td>
+              </tr>
+              <tr>
+                <td>barva</td>
+                <td>Potomek elementu kamera.Barva ikony</td>
+              </tr>
+              <tr>
+                <td>moznosti</td>
+                <td>Potomek elementu kamera.Mnozstvi funkci kamery</td>
+              </tr>
+              <tr>
+                <td>vyfotit</td>
+                <td>Potomek elementu moznosti.Udela klasicke foto/selfie.</td>
+              </tr>
+              <tr>
+                <td>volne_ruce</td>
+                <td>Potomek elementu moznosti.Nahraje video zaznam.</td>
+              </tr>
+              <tr>
+                <td>onair</td>
+                <td>Potomek elementu moznosti.Vysilani online.</td>
+              </tr>
+              <tr>
+                <td>boomerang</td>
+                <td>Potomek elementu moznosti.Zaznam opakuje nahrane pohyby.</td>
+              </tr>
+              <tr>
+                <tr>
+                  <td>docasna_publikace</td>
+                    <td>Potomek elementu kamera.Tlacitko publikace zaznamu nebo snimku na 24 hod.</td>
+                <tr>
+                  <td>popis</td>
+                  <td>Potomek elementu docasna_publikace.Popisuje funkce docasne_publikace</td>
+                </tr>
+                <tr>
+                  <td>moje_stranka</td>
+                  <td>Potomek elementu uvodni_stranka.Profilova stranka uzivatele.</td>
+                </tr>
+                <tr>
+                  <td>rozmisteni</td>
+                  <td>Potomek elementu moje_stranka.Rozmisteni ikony.</td>
+                </tr>
+                <tr>
+                  <td>obrazek</td>
+                  <td>Potomek elementu moje_stranka.Ikona elementu obrazek</td>
+                </tr>
+                <tr>
+                  <td>barva</td>
+                  <td>Potomek elementu moje_stranka.Barva elementu.</td>
+                </tr>
+                <tr>
+                  <td>popis</td>
+                  <td>Potomek elementu moje_stranka.Popisuje element moje_stranka</td>
+                </tr>
+                <tr>
+                  <td>blok_about</td>
+                  <td>Potomek elementu moje_stranka.Info o uzivatele.</td>
+                </tr>
+                <tr>
+                  <td>avatar</td>
+                  <td>Potomek elementu moje_stranka.Zakladni fotka profilu.</td>
+                </tr>
+                <tr>
+                  <td>blok_foto</td>
+                  <td>Potomek elementu moje_stranka.Zverejnene fotky uzivatele.</td>
+                </tr>
+                <tr>
+                  <td>editace_profilu</td>
+                  <td>Potomek elementu moje_stranka.Nastaveni osobni informace.</td>
+                </tr>
+                <tr>
+                  <td>jmeno</td>
+                  <td>Potomek elementu editace_profilu. Jmeno uzivetele.</td>
+                </tr>
+                <tr>
+                  <td>username</td>
+                  <td>Potomek elementu editace_profilu.Username uzivatele.</td>
+                </tr>
+                <tr>
+                  <td>social</td>
+                  <td>Potomek elementu editace_profilu.Spoje a odkazy na soc.site.</td>
+                </tr>
+                <tr>
+                  <td>about</td>
+                  <td>Potomek elementu editace_profilu.Lze napsat o sobe.</td>
+                </tr>
+                <tr>
+                  <td>email</td>
+                  <td>Potomek elementu editace_profilu.Registracni mail.</td>
+                </tr>
+                <tr>
+                  <td>phone</td>
+                  <td>Potomek elementu editace_profilu.Registracni tel.cislo.</td>
+                </tr>
+                <tr>
+                  <td>sex</td>
+                  <td>Potomek elementu editace_profilu.Pohlavi uzivatele</td>
+                </tr>
+                <tr>
+                  <td>ava</td>
+                  <td>Potomek elementu editace_profilu. Zmena profilove fotky</td>
+                </tr>
+                <tr>
+                  <td>parametry</td>
+                  <td>Potomek elementu moje_stranka.Nastaveni aplikace</td>
+                </tr>
+                <tr>
+                  <td>rozmisteni</td>
+                  <td>Potomek elementu parametry.Misto ikony.</td>
+                </tr>
+                <tr>
+                  <td>ucet</td>
+                  <td>Potomek elementu parametry.Ucet uzivatele</td>
+                </tr>
+                <tr>
+                  <td>heslo</td>
+                  <td>Potomek elementu ucet. Zmena hesla.</td>
+                </tr>
+                <tr>
+                  <td>privatnost</td>
+                  <td>Potomek elementu ucet.Možnost udelat zavreny ucet.</td>
+                </tr>
+                <tr>
+                  <td>zablokovane</td>
+                  <td>Potomek elementu ucet.Zablokovane uzivatele.</td>
+                </tr>
+                <tr>
+                  <td>liked</td>
+                  <td>Potomek elementu ucet.Prispevky co se polibili</td>
+                </tr>
+                <tr>
+                  <td>nastaveni</td>
+                  <td>Potomek elementu parametry.Hlavni nastaveni aplikace a sluzby.</td>
+                </tr>
+              <tr>
+              <td>jazyk</td>
+                  <td>Potomek elementu nastaveni.Automaticky jazyk zarizeni.</td>
+                </tr>
+              <tr>
+              <td>jazyky</td>
+                  <td>Potomek elementu jazyk.Vyber z dalsich jazyku.</td>
+                </tr>
+              <tr>
+              <td>vyberjaz</td>
+                  <td>Potomek elementu jazyk.Tlacitko vybera jazyka.</td>
+                </tr>
+              <tr>
+              <td>push</td>
+                  <td>Potomek elementu nastaveni.Push-udalosti.</td>
+                </tr>
+              <tr>
+              <td>libi_se</td>
+                  <td>Potomek elementu push.Posila oznameni o like.</td>
+                </tr>
+              <tr>
+              <td>koment</td>
+                  <td>Potomek elementu push.Posila oznameni o komentare.</td>
+                </tr>
+              <tr>
+              <td>direkt</td>
+                  <td>Potomek elementu push.Posila oznameni o zpravach.</td>
+                </tr>
+              <tr>
+              <td>vzhlednuti</td>
+                  <td>Potomek elementu push.Posila oznameni o poctu prohlednutych.</td>
+                </tr>
+              <tr>
+              <td>prihlasit_se</td>
+                  <td>Potomek elementu nastaveni.Prihlaseni na ucet.</td>
+                </tr>
+              <tr>
+              <td>login</td>
+                  <td>Potomek elementu prihlasit_se.Zada o login.</td>
+                </tr>
+              <tr>
+              <td>password</td>
+                  <td>Potomek elementu prihlasit_se.Zada o heslo.</td>
+                </tr>
+              <tr>
+              <td>enter</td>
+                  <td>Potomek elementu prihlasit_se.Tlacitko vstup.</td>
+                </tr>
+              <tr>
+              <td>barva</td>
+                <td>Potomek elementu enter.Barva tlacitka.</td>
+              </tr>
+              <tr>
+                  <td>velikost_pisma</td>
+                  <td>Potomek elementu enter.Velikost pisma tlacitka.</td>
+                </tr>
+          </table>
+          <br />
+          <i>Celkový počet elementů:</i>
+          <b>71</b>
+          <br />
+          <br />
+   
+        <article  id="transformace"><h2>Transformace</h2><p>Ukazuje pomocí "value of select" Autora publikace,přídané komentaře a počet lijků. Pak ukaže fotky setřídeny podle datumu publikace. Pomocí "for each select" se provadí výběr jayzyka aplikace.</p>  
+</article>
+        <article  id="zaver"><h2>Závěr</h2><p>V semestrální práci byly využity zdroje informace:<a href="https://moodle.czu.cz/course/view.php?id=8190">Moodle ČZU</a>, <a href="https://www.w3schools.com/xml/">WEB W3schools</a> a další video turorialy.</p>  
+        </article>
+      </section>
+    </main>
+    <footer>
+     <section id="autor">
+              <h2>Vytvořil:</h2>
+              <p>Berest Andrey<br/>
+                PEF,ČZU<br/>
+              Obor: Informatika<br/>
+              V Praze 2017</p>
+          </section>
+
+        <p>&copy; Berest Andrey</p>
+    </footer>
+  </body>
+</html>

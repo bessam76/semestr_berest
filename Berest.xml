@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Fotoalbum>
+  <uvodni_stranka>
+    <fotka>
+      <rozmisteni>v centru obrazovky</rozmisteni>
+      <autor id="username">zobrazuje se nad fotkou</autor>
+      <datum>datum publikace</datum>
+      <komentare>
+        <tagy>tagy pro lepsi navigaci</tagy>
+        <smiles>zprava pomoci emoci</smiles>
+        <barva_textu>cerna</barva_textu>
+        <velikost_pisma>5</velikost_pisma>
+      </komentare>
+      <like ucel="prokazuje komu se libi fotka">
+        <rozmisteni>dole vlevo pod foto</rozmisteni>
+        <barva>cerna</barva>
+        <obrazek>forma srdce</obrazek>
+        <stav liked="yes">cervene obarvene srdce </stav>
+      </like>
+      <sdileni>moznost poslat foto odeberatelum
+        <rozmisteni>vlevo dolu pod foto</rozmisteni>
+        <obrazek>forma papiroveho letadla</obrazek>
+        <barva>cerna</barva>
+      </sdileni>
+      </fotka>
+      <kamera ucel="rychle foceni a publikace">
+        <rozmisteni>vlevo nahoru v rohu</rozmisteni>
+        <obrazek>ikonka fotoaparatu</obrazek>
+        <barva>cerna</barva>
+        <moznosti>
+          <vyfotit>klasicke foto</vyfotit>
+          <volne_ruce>video zaznam</volne_ruce>
+          <onair>prime vysilani</onair>
+          <boomerang>zaznam opakujici pohyby</boomerang>
+        </moznosti>
+        <docasna_publikace>
+          <popis>zverejni fotlku na 24 hodiny,pak smaze</popis>
+        </docasna_publikace>
+        </kamera>
+    <moje_stranka>
+      <rozmisteni>uplne dole vpravo</rozmisteni>
+      <obrazek>ikona uzivatele</obrazek>
+      <barva>cerna</barva>
+      <popis>ukauje osobni profil,ulozene fotky,nastaveni</popis>
+      <blok_about>obecne zkracena informace o majitele uctu</blok_about>
+      <avatar>zakladni foto profilu</avatar>
+      <blok_foto>zverejnene prispevky uzivatele</blok_foto>
+      <editace_profilu>
+        <jmeno>zadat jmeno uzivatele</jmeno>      
+        <username>zadat username</username>
+        <social>odkazy na soc.site</social>
+        <about>editovat info o sobe</about>
+        <email filled="yes">registracni email</email>
+        <phone confirmed="yes">telefonni cislo</phone>
+        <sex>pohlavi</sex>
+        <ava>zmenit profilovou fotku</ava>
+      </editace_profilu>
+      <parametry>
+        <rozmisteni>nahore vpravo v rohu 3 tecky</rozmisteni>
+        <ucet>
+          <heslo>zmena hesla</heslo>
+          <privatnost on="yes">privatni ucet je dostupen pouze schvalenym</privatnost>
+          <zablokovane>zablokovane uzivatele</zablokovane>
+          <liked>prispevky co se polibili</liked>
+        </ucet>
+        <nastaveni>
+          <jazyk default="phone language">automaticky jazyk telefonu
+            <jazyky>Eng,Ces,Rus</jazyky>
+            <vyberjaz>talcitko vyberu jazyka</vyberjaz>
+            </jazyk>
+          <push>oznameni o udalosti
+            <libi_se like="on">posila  oznameni o like</libi_se>
+            <koment comment="on">posila oznameni o komentare</koment>
+            <direct message="on">prijimat zpravy</direct>
+            <vzhlednuti pocet="on">ukazuje pocet prohlednuti prispevku</vzhlednuti>
+          </push>
+          <log_off>odhlasit se</log_off>
+          <prihlasit_se>
+            <login>zadat username || emal || phone</login>
+            <password>zadat heslo uzivatele</password>
+            <enter>tlacitko vstup
+              <barva>modra</barva>
+              <velikost_pisma>5</velikost_pisma>
+            </enter>
+          </prihlasit_se>
+        </nastaveni>
+      </parametry>
+    </moje_stranka>
+  </uvodni_stranka>
+</Fotoalbum>

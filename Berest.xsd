@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xs:element name="Fotoalbum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="uvodni_stranka"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="uvodni_stranka">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="fotka"/>
+        <xs:element ref="kamera"/>
+        <xs:element ref="moje_stranka"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="fotka">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="rozmisteni" type="xs:string"/>
+        <xs:element ref="autor"/>
+        <xs:element name="datum" type="xs:string"/>
+        <xs:element ref="komentare"/>
+        <xs:element ref="like"/>
+        <xs:element ref="sdileni"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="autor">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="komentare">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="tagy" type="xs:string"/>
+        <xs:element name="smiles" type="xs:string"/>
+        <xs:element name="barva_textu" type="xs:string"/>
+        <xs:element name="velikost_pisma" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="like">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="rozmisteni" type="xs:string"/>
+        <xs:element name="barva" type="xs:string"/>
+        <xs:element name="obrazek" type="xs:string"/>
+        <xs:element ref="stav"/>
+      </xs:sequence>
+      <xs:attribute name="ucel" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="stav">
+    <xs:complexType mixed="true">
+      <xs:attribute name="liked" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sdileni">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element name="rozmisteni" type="xs:string"/>
+        <xs:element name="obrazek" type="xs:string"/>
+        <xs:element name="barva" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="kamera">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="rozmisteni" type="xs:string"/>
+        <xs:element name="obrazek" type="xs:string"/>
+        <xs:element name="barva" type="xs:string"/>
+        <xs:element ref="moznosti"/>
+        <xs:element ref="docasna_publikace"/>
+      </xs:sequence>
+      <xs:attribute name="ucel" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="moznosti">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="vyfotit" type="xs:string"/>
+        <xs:element name="volne_ruce" type="xs:string"/>
+        <xs:element name="onair" type="xs:string"/>
+        <xs:element name="boomerang" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="docasna_publikace">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="popis" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="moje_stranka">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="rozmisteni" type="xs:string"/>
+        <xs:element name="obrazek" type="xs:string"/>
+        <xs:element name="barva" type="xs:string"/>
+        <xs:element name="popis" type="xs:string"/>
+        <xs:element name="blok_about" type="xs:string"/>
+        <xs:element name="avatar" type="xs:string"/>
+        <xs:element name="blok_foto" type="xs:string"/>
+        <xs:element ref="editace_profilu"/>
+        <xs:element ref="parametry"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="editace_profilu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="jmeno" type="xs:string"/>
+        <xs:element name="username" type="xs:string"/>
+        <xs:element name="social" type="xs:string"/>
+        <xs:element name="about" type="xs:string"/>
+        <xs:element ref="email"/>
+        <xs:element ref="phone"/>
+        <xs:element name="sex" type="xs:string"/>
+        <xs:element name="ava" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="email">
+    <xs:complexType mixed="true">
+      <xs:attribute name="filled" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="phone">
+    <xs:complexType mixed="true">
+      <xs:attribute name="confirmed" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="parametry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="rozmisteni" type="xs:string"/>
+        <xs:element ref="ucet"/>
+        <xs:element ref="nastaveni"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ucet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="heslo" type="xs:string"/>
+        <xs:element ref="privatnost"/>
+        <xs:element name="zablokovane" type="xs:string"/>
+        <xs:element name="liked" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="privatnost">
+    <xs:complexType mixed="true">
+      <xs:attribute name="on" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nastaveni">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="jazyk"/>
+        <xs:element ref="push"/>
+        <xs:element name="log_off" type="xs:string"/>
+        <xs:element ref="prihlasit_se"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="jazyk">
+    <xs:complexType mixed="true">
+      <xs:attribute name="default" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="push">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="libi_se"/>
+        <xs:element ref="koment"/>
+        <xs:element ref="direct"/>
+        <xs:element ref="vzhlednuti"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="libi_se">
+    <xs:complexType mixed="true">
+      <xs:attribute name="like" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="koment">
+    <xs:complexType mixed="true">
+      <xs:attribute name="comment" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="direct">
+    <xs:complexType mixed="true">
+      <xs:attribute name="message" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="vzhlednuti">
+    <xs:complexType mixed="true">
+      <xs:attribute name="pocet" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="prihlasit_se">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="login" type="xs:string"/>
+        <xs:element name="password" type="xs:string"/>
+        <xs:element ref="enter"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="enter">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element name="barva" type="xs:string"/>
+        <xs:element name="velikost_pisma" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
